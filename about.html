@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>LuckyJob - About</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER & NAV -->
+  <header>
+    <div class="navbar">
+      <div class="navbar-left">
+        <div class="logo">LuckyJob</div>
+        <input type="checkbox" id="menu-toggle" />
+        <nav class="navbar-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="enhancements.html">Enhancements</a></li>
+            <li><a href="mailto:yourID@swin.edu.au">Email</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="navbar-right">
+        <div class="location">New York, NY</div>
+        <div class="user-avatar"></div>
+        <label for="menu-toggle" class="menu-btn">&#9776; Menu</label>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content" style="flex-direction: column;">
+
+    <section style="background: #fff; border-radius: 8px; padding: 1rem;">
+      <h1>Our Group</h1>
+      <dl style="display: flex; flex-wrap: wrap; gap: 1rem;">
+        <div style="flex:1; min-width: 300px;">
+          <dt><strong>Group Name:</strong></dt>
+          <dd>LuckyJob Warriors</dd>
+
+          <dt><strong>Group ID:</strong></dt>
+          <dd>G123</dd>
+
+          <dt><strong>Tutor Name:</strong></dt>
+          <dd>Mr. John Smith</dd>
+
+          <dt><strong>Members & Contributions:</strong></dt>
+          <dd>
+            - Alice (Leader, HTML/CSS) <br>
+            - Bob (Report, Testing) <br>
+            - Charlie (UI/UX, CSS)
+          </dd>
+        </div>
+
+        <div style="flex:1; min-width: 300px;">
+          <figure style="float: right; text-align: center;">
+            <img src="./images/team.jpg" alt="Our team photo" style="max-width: 200px; border: 2px solid #ccc;" />
+            <figcaption>LuckyJob Warriors Team</figcaption>
+          </figure>
+        </div>
+      </dl>
+    </section>
+
+    <section style="background: #fff; border-radius: 8px; padding: 1rem; margin-top: 1rem;">
+      <h2>Group Timetable (Assumed)</h2>
+      <table border="1" style="margin: 0 auto; border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Subject</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>8:00 - 11:00</td>
+            <td>COS10026</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>13:00 - 16:00</td>
+            <td>Software Testing</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>9:00 - 12:00</td>
+            <td>UI/UX Design</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</body>
+
+</html>
