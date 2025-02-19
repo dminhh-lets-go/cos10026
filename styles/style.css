@@ -80,7 +80,7 @@
 
  /* ----- MAIN CONTENT WRAPPER ----- */
  .main-content {
-  background-color: #000;
+  background: black;
   box-shadow: 0 10px 30px rgba(5, 5, 5, 0.527);
   max-width: 1600px;
   height: 600px;
@@ -422,7 +422,8 @@
 }
 
 #index-picture {
-  background-image: url("");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.959), rgba(0, 0, 0, 0.295) ),
+                    url("https://www.goto.com/-/media/blog/posts/2021/istock-688892392.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
