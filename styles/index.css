@@ -1,0 +1,140 @@
+/*----index styles----*/
+#index-welcome {
+  width: 100%;
+  border-radius: 8px;
+  padding: 5rem;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+ }
+
+.main-intro {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.658) ),
+                      url("/cos10026/styles/images/indexmeeting.jpg");
+    box-shadow: 0 10px 30px rgba(5, 5, 5, 0.37);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 600px;
+    height: 100vh;
+    display: flex;
+    gap: 1rem;
+  }
+  #intro-logo {
+    margin: auto;
+    width: 20%;
+    height: 20%;
+    background: url("/cos10026/styles/images/company_logo.png");
+    background-size: cover;
+    background-repeat: none
+  }
+ 
+  .narow-head {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 1rem;
+  }
+  
+
+
+  
+  /*---index lower cotent---*/
+  .lower-content {
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .index-Img {
+    display: flex;
+  }
+  .Img-cover {
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    
+  }
+  
+  #index-reason {
+    width: 100%;
+    text-align: center;
+  }
+  
+  #reason-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem;
+    justify-content: center;
+    gap: 8rem;
+  }
+  
+  #reason-box div {
+    flex: 1 1 10%;
+    flex-direction: column; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.589); 
+    border-radius: 10px;
+    box-sizing: border-box; 
+    background: red;
+    color: white;
+    font-size: 12px;
+  }
+  /*--picture--*/
+  #partnered-picture,
+  #specialized-picture,
+  #support-picture,
+  #coaching-picture {
+    display: flex;
+    padding: 1rem;
+    border-radius: 8px;
+    min-height: 200px;
+    max-width: 1200px;
+  }
+  #partnered-picture {
+    background: url("/cos10026/styles/images/shakehand.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  #specialized-picture {
+    background: url("/cos10026/styles/images/specialized.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  #support-picture {
+    background: url("/cos10026/styles/images/support.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  #coaching-picture {
+    background: url("/cos10026/styles/images/coaching.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .reason-hr {
+    padding: 0.25rem ;
+  }
+
+  .under-title {
+    padding: 0.5rem;
+    font-weight: bold;
+  }
+  /*---Scrolling top---*/
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+  }
+  .scroll-to-top:hover {
+    background: gray;
+  }
