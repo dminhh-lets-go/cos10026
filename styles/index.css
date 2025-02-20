@@ -1,0 +1,114 @@
+/*----index styles----*/
+
+.main-intro {
+    background: black;
+    box-shadow: 0 20px 30px rgba(5, 5, 5, 0.527);
+    width: 100%;
+    min-height: 600px;
+    height: 86vh;
+    display: flex;
+    gap: 1rem;
+  }
+  
+   #index-welcome {
+    width: 50%;
+    border-radius: 8px;
+    padding: 1rem;
+    line-height: 30px;
+    color: white;
+   }
+  
+  .narow-head {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 1rem;
+  }
+  
+  #index-picture {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.959), rgba(0, 0, 0, 0.295) ),
+                      url("https://www.goto.com/-/media/blog/posts/2021/istock-688892392.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 50%;
+    padding: 1rem;
+  }
+  
+  br {
+    display: block;
+    margin: 10px;
+  }
+  
+  /*---index lower cotent---*/
+  .lower-content {
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .index-Img {
+    display: flex;
+  }
+  
+  #index-reason {
+    width: 100%;
+    text-align: center;
+  }
+  
+  #reason-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem;
+    justify-content: center;
+    gap: 5rem;
+  }
+  
+  #reason-box div {
+    flex: 1 1 10%;
+    flex-direction: column; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.589); 
+    border-radius: 10px;
+    box-sizing: border-box; 
+    background: red;
+    color: white;
+  }
+  /*--picture--*/
+  #partnered-picture,
+  #specialized-picture,
+  #support-picture,
+  #coaching-picture {
+    display: flex;
+    padding: 1rem;
+    border-radius: 8px;
+    background: blue;
+    min-height: 200px;
+    max-width: 1200px;
+  }
+  #partnered-picture {
+    background: url("/cos10026/styles/images/shakehand.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  #specialized-picture {
+    background: url("/cos10026/styles/images/specialized.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  #support-picture {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ77Ta6A9qvZU7SP6yy9GFhbmoEscQajpjnbzSxKero1-yq-bT-6nW1AOq0aaXsTfe87cY&usqp=CAU");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  /*---index lower cotent job box---*/
+  .Img-cover {
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    
+  }
+
+
