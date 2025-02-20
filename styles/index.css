@@ -1,43 +1,42 @@
 /*----index styles----*/
+#index-welcome {
+  width: 100%;
+  border-radius: 8px;
+  padding: 5rem;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+ }
 
 .main-intro {
-    background: black;
-    box-shadow: 0 20px 30px rgba(5, 5, 5, 0.527);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.658) ),
+                      url("/cos10026/styles/images/indexmeeting.jpg");
+    box-shadow: 0 10px 30px rgba(5, 5, 5, 0.37);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     min-height: 600px;
-    height: 86vh;
+    height: 100vh;
     display: flex;
     gap: 1rem;
   }
-  
-   #index-welcome {
-    width: 50%;
-    border-radius: 8px;
-    padding: 1rem;
-    line-height: 30px;
-    color: white;
-   }
-  
+  #intro-logo {
+    margin: auto;
+    width: 20%;
+    height: 20%;
+    background: url("/cos10026/styles/images/company_logo.png");
+    background-size: cover;
+    background-repeat: none
+  }
+ 
   .narow-head {
     font-size: 40px;
     font-weight: bold;
     padding: 1rem;
   }
   
-  #index-picture {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.959), rgba(0, 0, 0, 0.295) ),
-                      url("https://www.goto.com/-/media/blog/posts/2021/istock-688892392.jpg"); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 50%;
-    padding: 1rem;
-  }
-  
-  br {
-    display: block;
-    margin: 10px;
-  }
+
+
   
   /*---index lower cotent---*/
   .lower-content {
@@ -50,6 +49,12 @@
   .index-Img {
     display: flex;
   }
+  .Img-cover {
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    
+  }
   
   #index-reason {
     width: 100%;
@@ -61,7 +66,7 @@
     flex-wrap: wrap;
     padding: 5rem;
     justify-content: center;
-    gap: 5rem;
+    gap: 8rem;
   }
   
   #reason-box div {
@@ -72,6 +77,7 @@
     box-sizing: border-box; 
     background: red;
     color: white;
+    font-size: 12px;
   }
   /*--picture--*/
   #partnered-picture,
@@ -81,7 +87,6 @@
     display: flex;
     padding: 1rem;
     border-radius: 8px;
-    background: blue;
     min-height: 200px;
     max-width: 1200px;
   }
@@ -98,17 +103,38 @@
     background-position: center center;
   }
   #support-picture {
-    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ77Ta6A9qvZU7SP6yy9GFhbmoEscQajpjnbzSxKero1-yq-bT-6nW1AOq0aaXsTfe87cY&usqp=CAU");
+    background: url("/cos10026/styles/images/support.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
-  /*---index lower cotent job box---*/
-  .Img-cover {
-    display: flex;
-    padding: 0.5rem;
-    flex-direction: column;
-    
+  #coaching-picture {
+    background: url("/cos10026/styles/images/coaching.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 
+  .reason-hr {
+    padding: 0.25rem ;
+  }
 
+  .under-title {
+    padding: 0.5rem;
+    font-weight: bold;
+  }
+  /*---Scrolling top---*/
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+  }
+  .scroll-to-top:hover {
+    background: gray;
+  }
