@@ -17,7 +17,7 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="jobs.html">Jobs</a></li>
-            <li><a href="apply.html">Apply</a></li>
+            <li><a href="apply.html" class="active">Apply</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="enhancements.html">Enhancements</a></li>
             <li><a href="mailto:yourID@swin.edu.au">Email</a></li>
@@ -25,8 +25,8 @@
         </nav>
       </div>
       <div class="navbar-right">
-        <div class="location">New York, NY</div>
-        <div class="user-avatar"></div>
+        <div class="location">Hanoi, VN</div>
+        <img src="/styles/images/avatar.png" class="user-avatar" alt="avatar">
         <label for="menu-toggle" class="menu-btn">&#9776; Menu</label>
       </div>
     </div>
@@ -47,7 +47,7 @@
           name="jobRef"
           pattern="[A-Za-z0-9]{5}"
           maxlength="5"
-          placeholder="5 alphanumeric"
+          placeholder="e.g. DEV01"
           required
         >
         <br><br>
@@ -58,7 +58,8 @@
           id="fname"
           name="firstName"
           maxlength="20"
-          pattern="[A-Za-z]{1,20}"
+          pattern="^[A-Za-z ]{1,20}$"
+          placeholder="e.g. A"
           required
         >
         <br><br>
@@ -68,8 +69,9 @@
           type="text"
           id="lname"
           name="lastName"
-           maxlength="20"
-          pattern="[A-Za-z]{1,20}"
+          maxlength="20"
+          pattern="[A-Za-z\s]{1,20}"
+          placeholder="e.g. Nguyen Van"
           required
         >
         <br><br>
@@ -98,6 +100,7 @@
           id="address"
           name="address"
           maxlength="40"
+          placeholder="e.g. Room 706, Building Keangnam, Nam Trung Yen Ur"
           required
         >
         <br><br>
@@ -108,6 +111,7 @@
           id="suburb"
           name="suburb"
           maxlength="40"
+          placeholder="e.g. Hanoi"
           required
         >
         <br><br>
@@ -131,7 +135,8 @@
           type="text"
           id="postcode"
           name="postcode"
-          pattern="\\d{4}"
+          pattern="^[0-9]{4}$"
+          placeholder="e.g. 1000"
           required
         >
         <br><br>
@@ -141,6 +146,8 @@
           type="email"
           id="email"
           name="email"
+          pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
+          placeholder="e.g. nguyenvana@gmail.com"
           required
         >
         <br><br>
@@ -151,6 +158,7 @@
           id="phone"
           name="phone"
           pattern="[0-9 ]{8,12}"
+          placeholder="e.g. 09xxxxxxxx"
           required
         >
         <br><br>

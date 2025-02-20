@@ -71,8 +71,8 @@ nav a:hover {
 }
 
 .user-avatar {
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background-color: #888;
   display: inline-block;
@@ -443,6 +443,28 @@ select option {
   height: 10px;
 }
 
+#state {
+  height: 40px;
+}
+
+label {
+  font-weight: 600;
+}
+
+nav a {
+  color: #808089;
+}
+
+nav a.active {
+  color: white;
+}
+
+
+input:valid,
+select:valid {
+  border: 2px solid green;
+}
+
 /* ----- RESPONSIVE ----- */
 @media (max-width: 768px) {
   .main-content {
@@ -461,17 +483,31 @@ select option {
     display: inline-block;
   }
 
+  .location {
+    display: none;
+  }
+
+  .user-avatar {
+    display: none;
+  }
+
   .navbar-menu ul {
     position: absolute;
     width: 100%;
+    top: 40px;
+    left: 0;
     display: block;
     background: #111;
-    padding: 0 1rem;
     margin-top: 1rem;
-    border-radius: 8px;
+    border-radius: 0 0 8px 8px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+
   }
 
   #menu-toggle:checked~.navbar-menu ul {
@@ -479,6 +515,12 @@ select option {
   }
 
   .navbar-menu ul li {
-    margin: 0.8rem 0;
+    border-top: 1px solid white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
   }
+
+
 }
