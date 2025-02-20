@@ -348,6 +348,8 @@ nav a:hover {
   transition: none;
 }
 
+
+
 /* ----- RESPONSIVE ----- */
 @media (max-width: 768px) {
   .main-content {

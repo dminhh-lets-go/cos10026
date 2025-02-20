@@ -420,7 +420,6 @@
   padding: 1rem;
   line-height: 30px;
   color: white;
-  /*background-color: rgba(255,255,255,0.7);*/
  }
 
 .narow-head {
@@ -446,15 +445,16 @@ br {
 
 /*---index lower cotent---*/
 .lower-content {
-  max-width: 1600px;
-  min-height: 485px;
-  height: 5vh;
-  margin: 6.5rem auto 5rem;
   display: flex;
   gap: 1rem;
   text-align: center;
   flex-direction: column;
 }
+
+.index-Img {
+  display: flex;
+}
+
 #index-reason {
   width: 100%;
   text-align: center;
@@ -463,14 +463,14 @@ br {
 #reason-box {
   display: flex;
   flex-wrap: wrap;
+  padding: 5rem;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 #reason-box div {
-  flex: 1 1 22%;
+  flex: 1 1 10%;
   flex-direction: column; 
-  height: 350px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.589); 
   border-radius: 10px;
   box-sizing: border-box; 
@@ -484,152 +484,24 @@ br {
 #specialized-picture,
 #support-picture,
 #coaching-picture {
-  width: 100%;   
-  height: 80%; 
-  padding: 1rem; 
-  border-radius: 8px;
-  background-color: blue;
-}
-
-#lower-content-explore { 
+  display: flex;
   padding: 1rem;
-  text-align: center;
+  border-radius: 8px;
+  background: blue;
+  min-height: 200px;
+  max-width: 1200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
+#partnered-picture {
 
-#lower-content-explore a {
-  color: #333;
-  font-size: 30px;
-  font-weight: lighter;
-  text-decoration: none;
-  text-align: center;
 }
-
-#lower-content-explore a:hover {
-  color: #333333bb;
-  text-decoration: underline;
-}
-
 /*---index lower cotent job box---*/
-.lower-content-1 {
-  max-width: 1600px;
-  height: 950px;
-  margin: 5rem auto 2rem;
+.Img-cover {
   display: flex;
-  gap: 1rem;
-  text-align: center;
-  flex-direction: column;
-}
-#top-job {
-  width: 100%;
-  text-align: center;
-}
-#job-box div {
-  flex: 1 1 22%;
-  flex-direction: column;
-  justify-content: center; 
-  max-width: 900px;
-  margin: auto;
-  padding: 1rem;
-  height: 250px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.411); 
-  border-radius: 10px;
-  box-sizing: border-box; 
-}
-
-#jobs-color-1 {
-  background: rgb(142, 241, 187);
-}
-#jobs-color-2 {
-  background: rgb(206, 83, 255);
-}
-#jobs-color-3 {
-  background: rgb(111, 198, 233);
-}
-
-#jobs-color-1,
-#jobs-color-2,
-#jobs-color-3 {
-  width: 100%;
-  height: 80%; 
-  margin: auto;
-  padding: 1rem;
-  border-radius: 8px;
-  flex-direction: column;
-  text-align: left;
-  display: flex;
-}
-.job-date {
-  width: 120px;
-  height: 30px;
   padding: 0.5rem;
-  background-color: white;
-  font-weight: 550;
-  text-align: center;
-  border-radius: 50px;
-}
-#jobs-color-1 h1,
-#jobs-color-2 h1,
-#jobs-color-3 h1 {
-  width: 500px;
-  height: 40px;
-  font-size: 30px;
+  flex-direction: column;
+  
 }
 
-.job-info {
-  display: flex; 
-  width: 400px;
-  height: 100px;
-  gap: 10px; 
-}
-
-#jobs-color-1 p,
-#jobs-color-2 p,
-#jobs-color-3 p {
-  width: 100px;
-  height: 30px;
-  display: grid;
-  place-items: center;
-  border: solid 2px black;
-  border-radius: 50px;
-}
-
-#location-apply {
-  display: flex;
-  flex-direction: row; 
-  justify-content: space-between; 
-  align-items: center; 
-}
-
-#location-apply h4 {
-  width: 80px;
-  height: 30px;
-  display: grid;
-  place-items: center;
-}
-#location-apply p {
-  width: 150px;
-  height: 30px;
-  display: grid;
-  place-items: center;
-}
-
-#location-apply button {
-  padding: 0.5rem 1rem;
-  background-color:#333; 
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  width: 80px;
-  height: 40px; 
-}
-
-
-#location-apply button:hover{
-  background: #3333338f;  
-}
-
-#location-apply a {
-  color: white;
-  text-decoration: none;
-}
