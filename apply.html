@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <title>LuckyJob - Apply</title>
   <link rel="stylesheet" href="./styles/style.css" />
 </head>
-
 <body>
 
   <!-- HEADER & NAV -->
@@ -36,41 +34,82 @@
 
   <!-- MAIN CONTENT -->
   <div class="main-content" style="flex-direction: column;">
-    <section style="background: #fff; border-radius: 8px; padding: 1rem;">
-      <h1>Job Application Form</h1>
-
-      <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
-        <label for="refNo">Job Reference Number (5 alphanumeric):</label><br>
-        <input type="text" id="refNo" name="jobRef" pattern="[A-Za-z0-9]{5}" maxlength="5" required>
+    <h1>Job Application Form</h1>
+    <section class="applyForm">
+      <form
+        action="https://mercury.swin.edu.au/it000000/formtest.php"
+        method="post"
+      >
+        <label for="refNo">Job Reference Number:</label><br>
+        <input
+          type="text"
+          id="refNo"
+          name="jobRef"
+          pattern="[A-Za-z0-9]{5}"
+          maxlength="5"
+          placeholder="5 alphanumeric"
+          required
+        >
         <br><br>
 
-        <label for="fname">First Name (max 20 alpha):</label><br>
-        <input type="text" id="fname" name="firstName" pattern="[A-Za-z]{1,20}" required>
+        <label for="fname">First Name:</label><br>
+        <input
+          type="text"
+          id="fname"
+          name="firstName"
+          maxlength="20"
+          pattern="[A-Za-z]{1,20}"
+          required
+        >
         <br><br>
 
-        <label for="lname">Last Name (max 20 alpha):</label><br>
-        <input type="text" id="lname" name="lastName" pattern="[A-Za-z]{1,20}" required>
+        <label for="lname">Last Name:</label><br>
+        <input
+          type="text"
+          id="lname"
+          name="lastName"
+           maxlength="20"
+          pattern="[A-Za-z]{1,20}"
+          required
+        >
         <br><br>
 
-        <label for="dob">Date of Birth (dd/mm/yyyy):</label><br>
-        <input type="text" id="dob" name="dob" placeholder="e.g. 15/08/2000" pattern="\\d{1,2}/\\d{1,2}/\\d{4}"
-          required>
+        <label for="dob">Date of Birth:</label><br>
+        <input
+          type="date"
+          id="dob"
+          name="dob"
+          placeholder="e.g. 15/08/2000"
+          pattern="\\d{1,2}/\\d{1,2}/\\d{4}"
+          required
+        >
         <br><br>
 
         <fieldset>
           <legend>Gender</legend>
           <label><input type="radio" name="gender" value="Male" required>Male</label>
           <label><input type="radio" name="gender" value="Female" required>Female</label>
-          <label><input type="radio" name="gender" value="Other" required>Other</label>
         </fieldset>
         <br>
 
-        <label for="address">Street Address (max 40 chars):</label><br>
-        <input type="text" id="address" name="address" maxlength="40" required>
+        <label for="address">Street Address:</label><br>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          maxlength="40"
+          required
+        >
         <br><br>
 
-        <label for="suburb">Suburb/Town (max 40 chars):</label><br>
-        <input type="text" id="suburb" name="suburb" maxlength="40" required>
+        <label for="suburb">Suburb/Town:</label><br>
+        <input
+          type="text"
+          id="suburb"
+          name="suburb"
+          maxlength="40"
+          required
+        >
         <br><br>
 
         <label for="state">State:</label><br>
@@ -87,16 +126,33 @@
         </select>
         <br><br>
 
-        <label for="postcode">Postcode (4 digits):</label><br>
-        <input type="text" id="postcode" name="postcode" pattern="\\d{4}" required>
+        <label for="postcode">Postcode:</label><br>
+        <input
+          type="text"
+          id="postcode"
+          name="postcode"
+          pattern="\\d{4}"
+          required
+        >
         <br><br>
 
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+        >
         <br><br>
 
-        <label for="phone">Phone (8-12 digits/spaces):</label><br>
-        <input type="text" id="phone" name="phone" pattern="[0-9 ]{8,12}" required>
+        <label for="phone">Phone:</label><br>
+        <input
+          type="text"
+          id="phone"
+          name="phone"
+          pattern="[0-9 ]{8,12}"
+          required
+        >
         <br><br>
 
         <fieldset>
@@ -113,9 +169,10 @@
         <br><br>
 
         <button type="submit">Apply</button>
+        <button type="reset" class="reset-btn">Reset</button>
+
       </form>
     </section>
   </div>
 </body>
-
 </html>
