@@ -1,622 +1,70 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <title>LuckyJob UI Demo</title>
-  <style>
-    /* Reset CSS đơn giản */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: sans-serif;
-      background: #f7f8fa;
-      color: #333;
-    }
-
-    /* ----- HEADER & NAV BAR ----- */
-    header {
-      background-color: #111;
-      color: #fff;
-      padding: 1rem;
-    }
-
-    .navbar {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .navbar-left {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .logo {
-      font-size: 1.3rem;
-      font-weight: bold;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 1.5rem;
-      list-style-type: none;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: #ddd;
-    }
-
-    .navbar-right {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .location {
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-
-    .user-avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background-color: #888;
-      display: inline-block;
-    }
-
-    /* ----- MAIN CONTENT WRAPPER ----- */
-    .main-content {
-      max-width: 1200px;
-      margin: 1rem auto 2rem;
-      display: flex;
-      gap: 1rem;
-    }
-
-    /* ----- SIDEBAR FILTERS ----- */
-    .sidebar {
-      width: 20%;
-      background: #fff;
-      border-radius: 8px;
-      padding: 1rem;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-    }
-
-    .sidebar h3 {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
-
-    .filter-group {
-      margin-bottom: 2rem;
-    }
-
-    .filter-group label {
-      display: block;
-      margin: 0.3rem 0;
-      font-size: 0.95rem;
-      cursor: pointer;
-    }
-
-    .filter-group input[type="radio"],
-    .filter-group input[type="checkbox"] {
-      margin-right: 0.5rem;
-      transform: translateY(2px);
-      cursor: pointer;
-    }
-
-    /* ----- CONTENT AREA ----- */
-    .content-area {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    /* Search bar + filters row */
-    .filter-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      background: #fff;
-      border-radius: 8px;
-      padding: 1rem;
-      align-items: center;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-    }
-
-    .filter-bar select {
-      padding: 0.5rem;
-      border-radius: 4px;
-      border: 1px solid #ddd;
-      cursor: pointer;
-    }
-
-    .filter-bar .salary-range {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .salary-range input[type="range"] {
-      width: 100px;
-    }
-
-    /* Recommended jobs title + count */
-    .recommended-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .recommended-header h2 {
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
-
-    .recommended-header .job-count {
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    /* Job Cards */
-    .job-cards {
-      margin-top: 0.5rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1rem;
-    }
-
-    .job-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 0.5rem;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.06);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 180px;
-      border: 1px solid #282828;
-    }
-
-    #first-job-card {
-      background-color: rgb(255, 225, 203);
-      padding: 1rem;
-      border-radius: 10px;
-      flex: auto;
-    }
-
-    #second-job-card {
-      background-color: rgb(213, 246, 237);
-      padding: 1rem;
-      border-radius: 10px;
-      flex: auto;
-    }
-
-    #third-job-card {
-      background-color: rgb(225, 243, 255);
-      padding: 1rem;
-      border-radius: 10px;
-      flex: auto;
-    }
-
-    #fourth-job-card {
-      background-color: rgb(226, 219, 249);
-      padding: 1rem;
-      border-radius: 10px;
-      flex: auto;
-    }
-
-    #fifth-job-card {
-      background-color: rgb(237, 239, 245);
-      padding: 1rem;
-      border-radius: 10px;
-      flex: auto;
-    }
-
-    #last-job-card {
-      background-color: rgb(251, 226, 243);
-      padding: 1rem;
-      border-radius: 10px;
-      flex: auto;
-    }
-
-    .company-name {
-      font-size: smaller;
-    }
-
-    .job-card-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 0.5rem;
-    }
-
-    .job-card-date {
-      font-size: 0.85rem;
-      background-color: white;
-      font-weight: 600;
-      padding: 0.5rem;
-      border-radius: 15px;
-      font-size: small;
-    }
-
-    .job-card-company-logo {
-      width: 24px;
-      height: 24px;
-      border-radius: 4px;
-      background-color: #ccc;
-      display: inline-block;
-      text-align: center;
-      line-height: 24px;
-      font-size: 0.8rem;
-      color: #fff;
-    }
-
-    .job-card-title {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .job-card-tags {
-      margin-top: 20px;
-      font-size: 0.85rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-    }
-
-    .job-card-tags span {
-      border: solid 1px black;
-      border-radius: 20px;
-      padding: 0.2rem 0.5rem;
-    }
-
-    .job-card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 15px;
-      margin-bottom: 15px;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
-    .job-salary {
-      font-weight: 600;
-      color: #333;
-    }
-
-    .job-location {
-      font-size: 0.85rem;
-      color: #777;
-      margin-top: 0.2rem;
-    }
-
-    .job-detail-button {
-      background: #000;
-      color: #fff;
-      padding: 0.4rem 1rem;
-      border-radius: 15px;
-      text-decoration: none;
-      font-size: 0.85rem;
-      transition: background 0.2s;
-    }
-
-    .job-detail-button:hover {
-      background: white;
-      color: black;
-      border: solid 1px black;
-    }
-
-    .figma-image {
-      width: 30px;
-      border-radius: 50px;
-    }
-
-    /* ----- RESPONSIVE ----- */
-    @media (max-width: 768px) {
-      .main-content {
-        flex-direction: column;
-      }
-      .sidebar {
-        width: 100%;
-      }
-      .filter-bar {
-        justify-content: space-between;
-      }
-    }
-  </style>
+  <title>LuckyJob - Home</title>
+  <link rel="stylesheet" href="./styles/style.css" />
 </head>
-<body>
 
-  <!-- HEADER -->
+<body class="homepage">
+
+  <!-- HEADER & NAV -->
   <header>
     <div class="navbar">
       <div class="navbar-left">
         <div class="logo">LuckyJob</div>
-        <nav>
+        <input type="checkbox" id="menu-toggle" />
+        <nav class="navbar-menu">
           <ul>
-            <li><a href="#">Find job</a></li>
-            <li><a href="#">Messages</a></li>
-            <li><a href="#">Hiring</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="enhancements.html">Enhancements</a></li>
+            <!-- An email link as required -->
+            <li><a href="mailto:yourID@swin.edu.au">Email</a></li>
           </ul>
         </nav>
       </div>
       <div class="navbar-right">
         <div class="location">New York, NY</div>
         <div class="user-avatar"></div>
+        <label for="menu-toggle" class="menu-btn">&#9776; Menu</label>
       </div>
     </div>
   </header>
 
   <!-- MAIN CONTENT -->
-  <div class="main-content">
+  <div class="main-content" style="flex-direction: column;">
 
-    <!-- SIDEBAR FILTERS -->
-    <aside class="sidebar">
-      <h3>Filters</h3>
+    <!-- Section 1: Company intro -->
+    <section style="background-color: rgba(255,255,255,0.7); border-radius: 8px; padding: 1rem;">
+      <h1>Welcome to LuckyJob</h1>
+      <p>
+        LuckyJob is a leading tech recruitment agency that connects top talent
+        with the world’s best technology companies. Our headquarters are located
+        in San Francisco, and we have global offices to serve both employers and applicants.
+      </p>
+      <p>
+        We specialize in matching qualified IT professionals—developers, UI/UX, data scientists,
+        and more—to organizations worldwide. We provide professional consulting services to ensure
+        you find the best career opportunities available.
+      </p>
+    </section>
 
-      <!-- Working schedule -->
-      <div class="filter-group">
-        <h4>Working schedule</h4>
-        <label>
-          <input type="radio" name="working-schedule" /> Full time
-        </label>
-        <label>
-          <input type="radio" name="working-schedule" /> Part time
-        </label>
-        <label>
-          <input type="radio" name="working-schedule" /> Internship
-        </label>
-        <label>
-          <input type="radio" name="working-schedule" /> Project work
-        </label>
-        <label>
-          <input type="radio" name="working-schedule" /> Volunteering
-        </label>
-      </div>
-
-      <!-- Employment type -->
-      <div class="filter-group">
-        <h4>Employment type</h4>
-        <label>
-          <input type="checkbox" /> Full day
-        </label>
-        <label>
-          <input type="checkbox" /> Flexible schedule
-        </label>
-        <label>
-          <input type="checkbox" /> Shift work
-        </label>
-        <label>
-          <input type="checkbox" /> Distant work
-        </label>
-        <label>
-          <input type="checkbox" /> Shift method
-        </label>
-      </div>
-    </aside>
-
-    <!-- CONTENT AREA -->
-    <section class="content-area">
-      <!-- Filter bar -->
-      <div class="filter-bar">
-        <select name="position">
-          <option>Designer</option>
-          <option>Developer</option>
-          <option>Product Manager</option>
-        </select>
-
-        <select name="location">
-          <option>Work Location</option>
-          <option>Remote</option>
-          <option>On-site</option>
-        </select>
-
-        <select name="experience">
-          <option>Experience</option>
-          <option>Junior</option>
-          <option>Middle</option>
-          <option>Senior</option>
-        </select>
-
-        <select name="perMonth">
-          <option>Per month</option>
-          <option>Theo giờ</option>
-          <option>Theo tháng</option>
-        </select>
-
-        <div class="salary-range">
-          <label for="salaryRange">Salary range</label>
-          <input type="range" id="salaryRange" min="1200" max="20000" value="5000" />
-        </div>
-      </div>
-
-      <!-- Recommended jobs header -->
-      <div class="recommended-header">
-        <h2>Recommended jobs</h2>
-        <div class="job-count">386</div>
-      </div>
-
-      <!-- Job Cards -->
-      <div class="job-cards">
-        <!-- Card 1 -->
-        <div class="job-card">
-          <div id="fourth-job-card">
-            <div class="job-card-header">
-              <span class="job-card-date">20 May, 2023</span>
-              <span class="job-card-company-logo">A</span>
-            </div>
-            <p class="company-name">Amazon</p>
-            <h3 class="job-card-title">Senior UI/UX Designer</h3>
-            <div class="job-card-tags">
-              <span>Part time</span>
-              <span>Senior level</span>
-              <span>Distant</span>
-              <span>Project work</span>
-            </div>
-          </div>
-          <div class="job-card-footer">
-            <div>
-              <div class="job-salary">$250/hr</div>
-              <div class="job-location">San Francisco, CA</div>
-            </div>
-            <a href="#" class="job-detail-button">Details</a>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="job-card">
-          <div id="second-job-card">
-            <div class="job-card-header">
-              <span class="job-card-date">4 Feb, 2023</span>
-              <span class="job-card-company-logo">G</span>
-            </div>
-            <p class="company-name">Google</p>
-            <div class="job-card-title">
-              <h3>Junior UI/UX Designer</h3>
-              <img class="figma-image" src="./figma.png" alt="figma_image">
-            </div>
-            <div class="job-card-tags">
-              <span>Full time</span>
-              <span>Junior level</span>
-              <span>Distant</span>
-              <span>Project work</span>
-              <span>Flexible Schedule</span>
-            </div>
-          </div>
-          <div class="job-card-footer">
-            <div>
-              <div class="job-salary">$150/hr</div>
-              <div class="job-location">California, CA</div>
-            </div>
-            <a href="#" class="job-detail-button">Details</a>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="job-card">
-          <div id="first-job-card">
-            <div class="job-card-header">
-              <span class="job-card-date">29 Jan, 2023</span>
-              <span class="job-card-company-logo">D</span>
-            </div>
-            <p class="company-name">Dribbble</p>
-            <div class="job-card-title">
-              <h3>Senior Motion Designer</h3>
-              <img class="figma-image" src="./dribble.png" alt="figma_image">
-            </div>
-            <div class="job-card-tags">
-              <span>Part time</span>
-              <span>Senior level</span>
-              <span>Full Day</span>
-              <span>Shift work</span>
-            </div>
-          </div>
-          <div class="job-card-footer">
-            <div>
-              <div class="job-salary">$260/hr</div>
-              <div class="job-location">New York, NY</div>
-            </div>
-            <a href="#" class="job-detail-button">Details</a>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="job-card">
-          <div id="third-job-card">
-            <div class="job-card-header">
-              <span class="job-card-date">11 Apr, 2023</span>
-              <span class="job-card-company-logo">T</span>
-            </div>
-            <p class="company-name">Twitter</p>
-            <h3 class="job-card-title">UX Designer</h3>
-            <div class="job-card-tags">
-              <span>Full time</span>
-              <span>Middle level</span>
-              <span>Distant</span>
-              <span>Project work</span>
-            </div>
-          </div>
-          <div class="job-card-footer">
-            <div>
-              <div class="job-salary">$120/hr</div>
-              <div class="job-location">California, CA</div>
-            </div>
-            <a href="#" class="job-detail-button">Details</a>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="job-card">
-          <div id="last-job-card">
-            <div class="job-card-header">
-              <span class="job-card-date">2 Apr, 2023</span>
-              <span class="job-card-company-logo">A</span>
-            </div>
-            <p class="company-name">Airbnb</p>
-            <h3 class="job-card-title">Graphic Designer</h3>
-            <div class="job-card-tags">
-              <span>Part time</span>
-              <span>Senior level</span>
-            </div>
-          </div>
-          <div class="job-card-footer">
-            <div>
-              <div class="job-salary">$300/hr</div>
-              <div class="job-location">New York, NY</div>
-            </div>
-            <a href="#" class="job-detail-button">Details</a>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="job-card">
-          <div id="fifth-job-card">
-            <div class="job-card-header">
-              <span class="job-card-date">18 Jan, 2023</span>
-              <span class="job-card-company-logo">A</span>
-            </div>
-            <p class="company-name">Apple</p>
-            <h3 class="job-card-title">Graphic Designer</h3>
-            <div class="job-card-tags">
-              <span>Part time</span>
-              <span>Distant</span>
-            </div>
-          </div>
-          <div class="job-card-footer">
-            <div>
-              <div class="job-salary">$140/hr</div>
-              <div class="job-location">San Francisco, CA</div>
-            </div>
-            <a href="#" class="job-detail-button">Details</a>
-          </div>
-        </div>
-
-      </div>
+    <!-- Section 2: Key features -->
+    <section style="background-color: rgba(255,255,255,0.7); border-radius: 8px; padding: 1rem; margin-top: 1rem;">
+      <h2>Why Choose LuckyJob?</h2>
+      <ul>
+        <li>Partnered with over 2000 tech companies worldwide</li>
+        <li>Specialized in IT recruitment (Frontend, Backend, UI/UX, QA, etc.)</li>
+        <li>Supports on-site, remote, or hybrid work</li>
+        <li>Free career coaching and skill development services</li>
+      </ul>
     </section>
   </div>
 
 </body>
+
 </html>
