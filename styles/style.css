@@ -513,7 +513,7 @@ select:valid {
     gap: 0;
     flex-direction: column;
     align-items: center;
-
+    z-index: 99;
   }
 
   #menu-toggle:checked~.navbar-menu ul {
@@ -536,6 +536,12 @@ select:valid {
   }
 }
 
+/*----index styles----*/
+/*----index styles----*/
+/*----index styles----*/
+/*----index styles----*/
+/*----index styles----*/
+/*----index styles----*/
 /*----index styles----*/
 #index-welcome {
   width: 100%;
@@ -581,7 +587,6 @@ select:valid {
   text-align: center;
   flex-direction: column;
 }
-
 
 .Img-cover {
   display: flex;
