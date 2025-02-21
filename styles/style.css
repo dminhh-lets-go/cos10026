@@ -396,6 +396,71 @@ button[type="submit"]:hover {
   transform: scale(1.05);
 }
 
+ /** Minh's Code **/
+ @media (max-width: 768px) {
+  #section_head{
+    flex-direction: column !important;
+  }
+  .info_member {
+    flex-direction: column !important;
+  }
+  .info_member_extra {
+    display: none;
+  }
+ }
+#section_head {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.section_left {
+  background-color: #b3c0ae61;
+  display: flex;
+  min-width: 40%;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#group_name {
+  text-align: center;
+}
+#our_group {
+  padding: 20px;
+  font-size: 50px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+#small_des {
+  display: flex;
+  justify-content: space-between;
+}
+.section_group_picture {
+  background-color: #38cbad20;
+}
+
+
+.info_member {
+  width: inherit;
+  display: flex;
+  box-shadow: 0px 0px 5px;
+}
+.info_member_picture {
+  height: 100%;
+  border: 1px solid black;
+}
+.info_member_desc {
+  flex: 1;
+  border: 1px solid black;
+}
+.desc_details {
+  height: 100%;
+}
+.info_member_extra {
+  border: 1px solid black;
+  height: 100%;
+  width: 100px;
+  overflow: hidden;
+}
+
 button[type="submit"]:active {
   background: #004085;
   transform: scale(0.98);
