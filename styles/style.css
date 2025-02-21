@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +9,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background: #f7f8fa;
-  color: #333;
+  color: #1F1F1F;
 }
 
 body.homepage {
@@ -128,8 +129,9 @@ nav a:hover {
 
 /* Search bar + filters row */
 .filter-bar {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  font-size: small;
   gap: 1rem;
   background: #fff;
   border-radius: 8px;
@@ -396,23 +398,27 @@ button[type="submit"]:hover {
   transform: scale(1.05);
 }
 
- /** Minh's Code **/
- @media (max-width: 768px) {
-  #section_head{
+/** Minh's Code **/
+@media (max-width: 768px) {
+  #section_head {
     flex-direction: column !important;
   }
+
   .info_member {
     flex-direction: column !important;
   }
+
   .info_member_extra {
     display: none;
   }
- }
+}
+
 #section_head {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
+
 .section_left {
   background-color: #b3c0ae61;
   display: flex;
@@ -420,19 +426,23 @@ button[type="submit"]:hover {
   justify-content: space-between;
   flex-direction: column;
 }
+
 #group_name {
   text-align: center;
 }
+
 #our_group {
   padding: 20px;
   font-size: 50px;
   letter-spacing: 2px;
   text-align: center;
 }
+
 #small_des {
   display: flex;
   justify-content: space-between;
 }
+
 .section_group_picture {
   background-color: #38cbad20;
 }
@@ -443,17 +453,21 @@ button[type="submit"]:hover {
   display: flex;
   box-shadow: 0px 0px 5px;
 }
+
 .info_member_picture {
   height: 100%;
   border: 1px solid black;
 }
+
 .info_member_desc {
   flex: 1;
   border: 1px solid black;
 }
+
 .desc_details {
   height: 100%;
 }
+
 .info_member_extra {
   border: 1px solid black;
   height: 100%;
@@ -812,6 +826,10 @@ select:valid {
     padding-left: 10rem;
   }
 
+  .filter-bar {
+    flex-wrap: wrap;
+  }
+
   #partnered-picture,
   #specialized-picture,
   #support-picture,
@@ -839,3 +857,233 @@ select:valid {
     padding-left: 1rem;
   }
 }
+
+
+
+
+
+ /*--NINH'S*/
+ .content-job-area {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-items: center;
+   padding: 1rem;
+   gap: 2rem;
+ }
+
+ .content-job-area h1 {
+   width: 100%;
+ }
+
+ .content-job-area article {
+   width: 100%;
+   border-radius: 10px;
+   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+   color: #242424;
+   background-color: white;
+ }
+
+ .content-job-area button {
+   border: none;
+   color: white;
+   padding: 10px 40px;
+   margin: 0 auto;
+   margin-top: 2px;
+   margin-bottom: 2px;
+   text-align: center;
+   font-weight: bold;
+   border-radius: 15px;
+   cursor: pointer;
+   clear: both;
+   display: block;
+ }
+
+ .content-job-area ul {
+   padding-left: 1.75em;
+ }
+
+ .content-job-area ol {
+   padding-left: 1.5em;
+ }
+
+ .info {
+   padding-bottom: 1rem;
+   border-bottom: 1px outset rgba(0, 0, 0, 0.05);
+ }
+
+ .respo,
+ .require {
+   margin: 8px;
+   border-radius: 8px;
+   padding-bottom: 4px;
+ }
+
+ .respo h3,
+ .require h3 {
+   text-align: center;
+   font-size: 115%;
+   padding: 1px;
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+   background-color: #B3DCFA;
+ }
+
+ .job-title {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   color: white;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   padding: 1rem;
+   align-items: center;
+   border-bottom: 1px outset rgba(0, 0, 0, 0.05);
+ }
+
+ #job-name {
+   font-size: x-large;
+   color: #1F1F1F;
+   font-weight: 600;
+   display: flex;
+   flex: 1;
+ }
+
+ #work-type {
+   background-color: #cee4f3;
+   padding: 5px;
+   padding-left: 8px;
+   padding-right: 8px;
+   border-radius: 25px;
+   color: #198dd5;
+ }
+
+ #experience {
+   background-color: #aaeeb7;
+   padding: 5px;
+   padding-left: 8px;
+   padding-right: 8px;
+   border-radius: 25px;
+   color: #038605;
+ }
+
+ .short-description {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   gap: 8px;
+   font-size: small;
+   font-weight: 500;
+ }
+
+ .job-description-content {
+   display: flex;
+   flex-direction: row;
+   font-weight: 300;
+ }
+
+ .job-left-content {
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   padding: 1rem;
+   gap: 5px;
+   justify-content: space-between;
+   border-right: 1px outset rgba(0, 0, 0, 0.05);
+ }
+
+ .description p {
+   font-weight: 400;
+ }
+
+ .job-right-content {
+   font-size: small;
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+ }
+
+ .other-info {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   flex: 1;
+   border-bottom: 1px outset rgba(0, 0, 0, 0.05);
+ }
+
+ .job-right-content button {
+   margin-top: 1rem;
+   background: linear-gradient(to right, #007bff 0%, #007bff 100%);
+   color: white;
+   padding-top: 12px;
+   padding-bottom: 12px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-position 0.5s ease, transform 0.2s;
+   width: 100%;
+   background-size: 200% 100%;
+ }
+
+ .job-right-content button {
+   color: transparent;
+   position: relative;
+ }
+
+ .job-right-content button:hover {
+   background-position: right;
+   transform: scale(1.05);
+   background: linear-gradient(to right, #007bff 0%, #00cc44 100%);
+ }
+
+ .job-right-content button::after {
+   content: "Apply";
+   color: white;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+ }
+
+ .job-right-content button:hover::after {
+   content: "Go to Apply form";
+ }
+
+ .job-description-content h3 {
+   font-weight: 500;
+ }
+
+ .requirement ol li {
+   font-weight: 500;
+ }
+
+ #essential {
+   font-weight: 400;
+   font-size: medium;
+ }
+
+ @media (max-width: 768px) {
+   .job-description-content {
+     flex-direction: column;
+   }
+
+   .job-description-content h3 {
+     font-size: medium;
+   }
+
+   .other-info h3,
+   .info h3 {
+     font-size: medium;
+   }
+
+   .other-info {
+     margin-top: 5px;
+     padding-bottom: 5px;
+   }
+
+   #essential,
+   .responsibilities ul li,
+   .description p {
+     font-size: small;
+   }
