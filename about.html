@@ -5,6 +5,12 @@
   <meta charset="UTF-8" />
   <title>LuckyJob - About</title>
   <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Satisfy&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fondamento:ital@0;1&family=Satisfy&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -37,28 +43,19 @@
   <!-- MAIN CONTENT -->
   <div class="main-content" style="flex-direction: column;">
 
-    <section style="background: #fff; border-radius: 8px; padding: 1rem;">
-      <h1>Our Group</h1>
-      <dl style="display: flex; flex-wrap: wrap; gap: 1rem;">
-        <div style="flex:1; min-width: 300px;">
-          <dt><strong>Group Name:</strong></dt>
-          <dd>LuckyJob Warriors</dd>
-
-          <dt><strong>Group ID:</strong></dt>
-          <dd>G123</dd>
-
-          <dt><strong>Tutor Name:</strong></dt>
-          <dd>Mr. John Smith</dd>
-
-          <dt><strong>Members & Contributions:</strong></dt>
-          <dd>
-            - Alice (Leader, HTML/CSS) <br>
-            - Bob (Report, Testing) <br>
-            - Charlie (UI/UX, CSS)
-          </dd>
+    <section id="section_head" style="border-radius: 8px; padding: 1rem; min-height: 240px;">
+        <div class="section_left">
+            <div id="section_left_title">
+               <h1 id="our_group">Our Group</h1>
+               <h2 id="group_name">LuckyJob Warriors</h2>
+            </div>
+            <div id="small_des">
+               <p>Tutor: Mr.Binh </p>
+               <p>Group ID:1223456</p>
+            </div>
         </div>
 
-        <div style="flex:1; min-width: 300px;">
+        <div class="section_group_picture" style="min-width: 300px;">
           <figure style="float: right; text-align: center;">
             <img src="./images/team.jpg" alt="Our team photo" style="max-width: 200px; border: 2px solid #ccc;" />
             <figcaption>LuckyJob Warriors Team</figcaption>
@@ -67,31 +64,172 @@
       </dl>
     </section>
 
+    
+    <!-- Genneral Introduction -->
+    <section class="background-section" style="border-radius: 8px; padding: 1rem; margin-top: 1rem;">
+      <div class="card">
+        <dl class="group-info">
+            <dt>Group Name:</dt>
+            <dd>LuckyJob Warriors</dd>
+    
+            <dt>Group ID:</dt>
+            <dd>AC12345</dd>
+    
+            <dt>Tutor's Name:</dt>
+            <dd>Mr.Binh</dd>
+        </dl>
+    
+        <dl class="members">
+          <dt>Members Contribution:</dt>
+          <dd>
+              <dl class="member-list">
+                  <dt>Le Anh Tuan (ID: 02640)</dt>
+                  <dd>Frontend Development</dd>
+  
+                  <dt>Nguyen Duc Minh (ID: 102)</dt>
+                  <dd>Backend Development</dd>
+  
+                  <dt>Nguyen Quoc Trung (ID: 103)</dt>
+                  <dd>Database Management</dd>
+  
+                  <dt>Nguyen Van Hai Ninh (ID: 104)</dt>
+                  <dd>UI/UX Design</dd>
+              </dl>
+          </dd>
+      </dl>
+    </div>
+    </section>
+
+    
+    <!-- Member Detail -->
+    <h2>MORE ABOUT US .....</h2>
+
+    <div class="info_member">
+      <div class="info_member_picture">
+        <img src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/305997664_454147200076590_8737253435991840072_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=e2siQNlpEbsQ7kNvgHyQ0sS&_nc_oc=AdhVXrXRgnAqjjzUhpGVcPN1o5EqWUqnrqCpJwwZZT0DqN0oluMC2DF1U5YhjxQJx9c&_nc_zt=23&_nc_ht=scontent.fhan17-1.fna&_nc_gid=A4qVMCl6bdLkXf1em7w3vlN&oh=00_AYCkmFPNPKYw-MBDnme843bOMg0T31HCZmMCLcIYFBD88Q&oe=67BD413D" alt="" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px;">
+      </div>
+      <div class="info_member_desc">
+        <ul class="desc_details">
+          <li>&#128075; Name: </li>
+          <li>&#127881; Age: </li>
+          <li>&#128188; Work exlierience: </li>
+          <li>&#128187; Key skills: </li>
+          <li>&#x1F60D; Hobbies: </li>
+          <li>&#127969; About my Hometown: </li>
+        </ul>
+      </div>
+      <div class="info_member_extra">
+        <img src="https://static.vinwonders.com/production/danh-lam-thang-canh-ha-noi-4.webp" style="width: 200px; height: 200px; object-fit: cover;" alt="">
+        <p class="image-text">Im from Hanoi</p>
+      </div>
+    </div>
+
+
+    <div class="info_member">
+      <div class="info_member_picture">
+        <img src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/463597796_8381459618557115_2979155386135981220_n.png?_nc_cat=111&ccb=1-7&_nc_sid=0b6b33&_nc_ohc=0gGR_Pi-9rwQ7kNvgHDAqXi&_nc_oc=Adh-igqtnlhSf20FEf7de76HnWbfEJa2n7LP4NGukR0N2IgbeVrVg6Z6AzX6GYhrly8&_nc_zt=23&_nc_ht=scontent.fhan17-1.fna&_nc_gid=An1qCKYEaqLA84aweROPKiz&oh=00_AYDODodQxMmvKGYB5_AA_wqVMG8qtHoyGfLhjbEM4WyjCg&oe=67BD42F7" alt="" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px;">
+      </div>
+      <div class="info_member_desc">
+        <ul class="desc_details">
+          <li>&#128075; Name: </li>
+          <li>&#127881; Age: </li>
+          <li>&#128188; Work exlierience: </li>
+          <li>&#128187; Key skills: </li>
+          <li>&#x1F60D; Hobbies: </li>
+          <li>&#127969; About my Hometown: </li>
+        </ul>
+      </div>
+      <div class="info_member_extra">
+        <img src="https://static.vinwonders.com/production/danh-lam-thang-canh-ha-noi-4.webp" style="width: 200px; height: 200px; object-fit: cover;" alt="">
+        <p class="image-text">Im from Hanoi</p>
+      </div>
+    </div>
+
+
+    <div class="info_member">
+      <div class="info_member_picture">
+        <img src="https://i.pinimg.com/736x/91/a5/19/91a519b808a2c7a8b38e55daf7248627.jpg" alt="" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px;">
+      </div>
+      <div class="info_member_desc">
+        <ul class="desc_details">
+          <li>&#128075; Name: </li>
+          <li>&#127881; Age: </li>
+          <li>&#128188; Work exlierience: </li>
+          <li>&#128187; Key skills: </li>
+          <li>&#x1F60D; Hobbies: </li>
+          <li>&#127969; About my Hometown: </li>
+        </ul>
+      </div>
+      <div class="info_member_extra">
+        <img src="https://static.vinwonders.com/production/danh-lam-thang-canh-ha-noi-4.webp" style="width: 200px; height: 200px; object-fit: cover;" alt="">
+        <p class="image-text">Im from Hanoi</p>
+      </div>
+    </div>
+
+
+    <div class="info_member">
+      <div class="info_member_picture">
+        <img src="https://i.pinimg.com/736x/f7/9e/f4/f79ef404cf62372ec4e58e5eb0043c08.jpg" alt="" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px;">
+      </div>
+      <div class="info_member_desc">
+        <ul class="desc_details">
+          <li>&#128075; Name: </li>
+          <li>&#127881; Age: </li>
+          <li>&#128188; Work exlierience: </li>
+          <li>&#128187; Key skills: </li>
+          <li>&#x1F60D; Hobbies: </li>
+          <li>&#127969; About my Hometown: </li>
+        </ul>
+      </div>
+      <div class="info_member_extra">
+        <img src="https://static.vinwonders.com/production/danh-lam-thang-canh-ha-noi-4.webp" style="width: 200px; height: 200px; object-fit: cover;" alt="">
+        <p class="image-text">Im from Hanoi</p>
+      </div>
+    </div>
+
+  
+
+    <!-- Timetable -->
     <section style="background: #fff; border-radius: 8px; padding: 1rem; margin-top: 1rem;">
-      <h2>Group Timetable (Assumed)</h2>
-      <table border="1" style="margin: 0 auto; border-collapse: collapse;">
+      <h2 id="timetable_title">Group Timetable (Assumed)</h2>
+      <table id="timetable" border="1" style="width: 100%; margin: 0 auto; border-collapse: collapse;">
         <thead>
           <tr>
-            <th>Day</th>
+            <th>Date</th>
             <th>Time</th>
-            <th>Subject</th>
+            <th>Missions</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Monday</td>
+            <td>10/2/2025</td>
             <td>8:00 - 11:00</td>
-            <td>COS10026</td>
+            <td>Tóm tắt đề bài và tiêu chí chấm điểm</td>
           </tr>
           <tr>
-            <td>Wednesday</td>
+            <td>15/2/2025</td>
             <td>13:00 - 16:00</td>
-            <td>Software Testing</td>
+            <td>Phân công nhiệm vụ và thống nhất cách nộp file code</td>
+          </tr>
+          <tr>
+            <td>16/2/2025</td>
+            <td>9:00 - 12:00</td>
+            <td>Triển khai làm công việc cá nhân đã được phân chia</td>
           </tr>
           <tr>
             <td>Friday</td>
             <td>9:00 - 12:00</td>
-            <td>UI/UX Design</td>
+            <td>Gặp gỡ và call để giải quyết vấn đề kyc thuật trong lúc code</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>9:00 - 12:00</td>
+            <td>Giải quyết vấn đề Responsive</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>9:00 - 12:00</td>
+            <td>Kiểm tra lại lần cuối trước khi nộp bài</td>
           </tr>
         </tbody>
       </table>
