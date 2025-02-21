@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <title>LuckyJob - Jobs</title>
   <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/jobs.css"/>
 </head>
 
 <body>
@@ -18,7 +19,7 @@
         <nav class="navbar-menu">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="jobs.html" class="active">Jobs</a></li>
             <li><a href="apply.html">Apply</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="enhancements.html">Enhancements</a></li>
@@ -27,8 +28,8 @@
         </nav>
       </div>
       <div class="navbar-right">
-        <div class="location">California, CA</div>
-        <div class="user-avatar"></div>
+        <div class="location">Hanoi, VN</div>
+        <img src="/styles/images/avatar.png" class="user-avatar" alt="avatar">
         <label for="menu-toggle" class="menu-btn">&#9776; Menu</label>
       </div>
     </div>
@@ -53,87 +54,89 @@
       <h1>Current Openings</h1>
 
       <article>
-        <h2>Position 1: Frontend Developer</h2>
-        <p><strong>Reference No.:</strong> FE123</p>
-        <p><strong>Title:</strong> Frontend Developer</p>
-        <p><strong>Salary Range:</strong> $1200 - $2000 per week</p>
-        <p><strong>Reports to:</strong> Head of Engineering</p>
-        <p>
+        <h2>Frontend Developer</h2>
+        <p class="shortdesc">
           <strong>Short Description:</strong> Responsible for creating engaging,
-          user-friendly web interfaces and ensuring cross-browser compatibility.
+          user-friendly web interfaces and ensuring cross-browser compatibility
         </p>
+        <div class="info">
+          <p><strong>Reference No.:</strong> FE123</p>
+          <p><strong>Title:</strong> Frontend Developer</p>
+          <p><strong>Salary Range:</strong> $1200 - $2000 per week</p>
+          <p><strong>Reports to:</strong> Head of Engineering</p>
+        </div>
 
-        <h3>Key Responsibilities</h3>
-        <ul>
-          <li>Implement new frontend features and functionality</li>
-          <li>Optimize code for maximum performance</li>
-          <li>Collaborate with UX designers and backend developers</li>
-        </ul>
+        <div class="respo">
+          <h3>Key Responsibilities</h3>
+          <ul>
+            <li>Implement new frontend features and functionality</li>
+            <li>Optimize code for maximum performance</li>
+            <li>Collaborate with UX designers and backend developers</li>
+          </ul>
+        </div>
 
-        <h3>Requirements</h3>
-        <ol>
-          <li><strong>Essential:</strong>
-            <ul>
-              <li>Proficient in HTML5, CSS3, JS (2+ years)</li>
-              <li>Experience with React or Vue</li>
-            </ul>
-          </li>
-          <li><strong>Preferable:</strong>
-            <ul>
-              <li>Familiarity with Docker and CI/CD</li>
-              <li>Good communication in English</li>
-            </ul>
-          </li>
-        </ol>
-        <p>
-          Source/Reference:
-          <a href="https://recruitloop.com/blog/how-to-write-a-job-description" target="_blank">
-            RecruitLoop
-          </a>
-        </p>
+        <div class="require">
+          <h3>Requirements</h3>
+          <ol>
+            <li><strong>Essential:</strong>
+              <ul>
+                <li>Proficient in HTML5, CSS3, JS (2+ years)</li>
+                <li>Experience with React or Vue</li>
+              </ul>
+            </li>
+            <li><strong>Preferable:</strong>
+              <ul>
+                <li>Familiarity with Docker and CI/CD</li>
+                <li>Good communication in English</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+
+        <button>Apply</button>
       </article>
-
+      <!---->
       <article>
-        <h2>Position 2: UI/UX Designer</h2>
-        <p><strong>Reference No.:</strong> UX789</p>
-        <p><strong>Title:</strong> UI/UX Designer</p>
-        <p><strong>Salary Range:</strong> $1000 - $1800 per week</p>
-        <p><strong>Reports to:</strong> Product Manager</p>
-        <p>
+        <h2>UI/UX Designer</h2>
+        <p class="shortdesc">
           <strong>Short Description:</strong> Plan and create visually appealing,
-          user-centered interfaces for both web and mobile platforms.
+          user-centered interfaces for both web and mobile platforms
         </p>
+        <div class="info">
+          <p><strong>Reference No.:</strong> UX789</p>
+          <p><strong>Title:</strong> UI/UX Designer</p>
+          <p><strong>Salary Range:</strong> $1000 - $1800 per week</p>
+          <p><strong>Reports to:</strong> Product Manager</p>
+        </div>
 
-        <h3>Key Responsibilities</h3>
-        <ul>
-          <li>Develop wireframes and prototypes</li>
-          <li>Design UI based on core UX principles</li>
-          <li>Conduct user research and A/B testing</li>
-        </ul>
+        <div class="respo">
+          <h3>Key Responsibilities</h3>
+          <ul>
+            <li>Develop wireframes and prototypes</li>
+            <li>Design UI based on core UX principles</li>
+            <li>Conduct user research and A/B testing</li>
+          </ul>
+        </div>
 
-        <h3>Requirements</h3>
-        <ol>
-          <li><strong>Essential:</strong>
-            <ul>
-              <li>Figma or Sketch proficiency</li>
-              <li>Solid grasp of UX best practices</li>
-            </ul>
-          </li>
-          <li><strong>Preferable:</strong>
-            <ul>
-              <li>Illustration skills</li>
-              <li>Familiar with Agile/Scrum</li>
-            </ul>
-          </li>
-        </ol>
-        <p>
-          Source/Reference:
-          <a href="https://recruitloop.com/blog/how-to-write-a-job-description" target="_blank">
-            RecruitLoop
-          </a>
-        </p>
+        <div class="require">
+          <h3>Requirements</h3>
+          <ol>
+            <li><strong>Essential:</strong>
+              <ul>
+                <li>Figma or Sketch proficiency</li>
+                <li>Solid grasp of UX best practices</li>
+              </ul>
+            </li>
+            <li><strong>Preferable:</strong>
+              <ul>
+                <li>Illustration skills</li>
+                <li>Familiar with Agile/Scrum</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+        <button>Apply</button>    
       </article>
-
       <!-- FOOTER -->
       <footer style="margin-top: 2rem;">
         <hr />
