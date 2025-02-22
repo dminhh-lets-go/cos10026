@@ -652,6 +652,19 @@ select:valid {
   animation: floatUpDown 3s ease-in-out infinite;
 }
 
+@keyframes floatUpDown {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+    /* Logo di chuyển lên 20px */
+  }
+}
+
 .narow-head {
   font-size: 40px;
   font-weight: bold;
@@ -775,19 +788,6 @@ select:valid {
   100% {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-@keyframes floatUpDown {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-20px);
-    /* Logo di chuyển lên 20px */
   }
 }
 
