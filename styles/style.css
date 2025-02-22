@@ -411,6 +411,9 @@ button[type="submit"]:hover {
   .info_member_extra {
     display: none;
   }
+  #group_logo_about {
+    float: none !important;
+  }
 }
 
 #section_head {
