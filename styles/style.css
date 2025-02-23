@@ -310,7 +310,7 @@ nav a:hover {
 
 .job-location {
   font-size: 0.85rem;
-  color: #777;
+  color: #1f1f1f;
   margin-top: 0.2rem;
 }
 
@@ -383,7 +383,7 @@ textarea {
 }
 
 button[type="submit"] {
-  background: #007bff;
+  background: #0040ff;
   color: white;
   font-size: 18px;
   padding: 12px 24px;
@@ -539,11 +539,11 @@ label {
 }
 
 nav a {
-  color: #808089;
+  color: white;
 }
 
 nav a.active {
-  color: white;
+  color: rgb(121, 248, 255);
 }
 
 
@@ -611,11 +611,6 @@ select:valid {
 
 }
 
-@media (max-width: 480px) {
-  #applyHeader {
-    font-size: x-large;
-  }
-}
 
 /*----index styles----*/
 /*----index styles----*/
@@ -653,6 +648,19 @@ select:valid {
   background-size: cover;
   background-repeat: no-repeat;
   animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+    /* Logo di chuyển lên 20px */
+  }
 }
 
 .narow-head {
@@ -778,19 +786,6 @@ select:valid {
   100% {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-@keyframes floatUpDown {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-20px);
-    /* Logo di chuyển lên 20px */
   }
 }
 
@@ -953,21 +948,21 @@ select:valid {
 }
 
 #work-type {
-  background-color: #cee4f3;
+  background-color: #126ba2;
   padding: 5px;
   padding-left: 8px;
   padding-right: 8px;
   border-radius: 25px;
-  color: #198dd5;
+  color: white;
 }
 
 #experience {
-  background-color: #aaeeb7;
+  background-color: #038605;
   padding: 5px;
   padding-left: 8px;
   padding-right: 8px;
   border-radius: 25px;
-  color: #038605;
+  color: white;
 }
 
 .short-description {
@@ -1203,7 +1198,7 @@ a {
 .table-status-fail {
   text-align: center;
   vertical-align: middle;
-  color: red;
+  color: rgb(128, 0, 0);
 }
 
 .member-photo {
@@ -1528,4 +1523,68 @@ thead tr {
   padding: 1rem;
   flex: 2;
   box-sizing: border-box;
+}
+
+
+
+.main-enhance {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.589);
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90%;
+  display: flex;
+  margin: 1rem auto 2rem;
+  gap: 1rem;
+  aspect-ratio: auto;
+  overflow: hidden;
+}
+
+#enhance-layout {
+  width: 100%;
+  border-radius: 8px;
+  padding: 10rem;
+  line-height: 30px;
+  text-align: center;
+}
+
+
+.enhance-des {
+  width: 100%;
+}
+
+#enhance-feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#feature-1,
+#feature-2,
+#feature-3,
+#feature-4,
+#feature-5,
+#feature-6 {
+  font-size: 11px;
+  padding: 1rem;
+  flex: 2;
+  box-sizing: border-box;
+}
+
+#show-product {
+  text-decoration: none;
+  color: red;
+  font-size: 30px;
+}
+
+@media (max-width: 480px) {
+  #applyHeader {
+    font-size: x-large;
+  }
+
+  #show-product {
+    font-size: 25px;
+  }
 }
