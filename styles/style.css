@@ -1586,3 +1586,63 @@ thead tr {
     font-size: 25px;
   }
 }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #dbeafe);
+  color: #1F1F1F;
+  margin: 0;
+  padding: 0;
+}
+
+.enhancements h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #0056b3;
+  text-shadow: 2px 2px 10px rgba(0, 86, 179, 0.2);
+  margin-bottom: 20px;
+}
+
+.enhancements p {
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 80%;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.enhancement {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.enhancement:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.enhancement h2 {
+  color: #0056b3;
+  text-shadow: 1px 1px 5px rgba(0, 86, 179, 0.2);
+}
+
+.enhancement pre {
+  background: #282c34;
+  color: #f8f8f2;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.enhancement code {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+#menu-toggle:checked~.navbar-menu ul {
+  max-height: 300px;
+}
