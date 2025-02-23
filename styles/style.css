@@ -310,7 +310,7 @@ nav a:hover {
 
 .job-location {
   font-size: 0.85rem;
-  color: #777;
+  color: #1f1f1f;
   margin-top: 0.2rem;
 }
 
@@ -383,7 +383,7 @@ textarea {
 }
 
 button[type="submit"] {
-  background: #007bff;
+  background: #0040ff;
   color: white;
   font-size: 18px;
   padding: 12px 24px;
@@ -536,11 +536,11 @@ label {
 }
 
 nav a {
-  color: #808089;
+  color: white;
 }
 
 nav a.active {
-  color: white;
+  color: rgb(121, 248, 255);
 }
 
 
@@ -950,21 +950,21 @@ select:valid {
 }
 
 #work-type {
-  background-color: #cee4f3;
+  background-color: #126ba2;
   padding: 5px;
   padding-left: 8px;
   padding-right: 8px;
   border-radius: 25px;
-  color: #198dd5;
+  color: white;
 }
 
 #experience {
-  background-color: #aaeeb7;
+  background-color: #038605;
   padding: 5px;
   padding-left: 8px;
   padding-right: 8px;
   border-radius: 25px;
-  color: #038605;
+  color: white;
 }
 
 .short-description {
@@ -1200,7 +1200,7 @@ a {
 .table-status-fail {
   text-align: center;
   vertical-align: middle;
-  color: red;
+  color: rgb(128, 0, 0);
 }
 
 .member-photo {
