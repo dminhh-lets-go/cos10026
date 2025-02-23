@@ -18,7 +18,7 @@
         <nav class="navbar-menu">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="jobs.html" class="active">Jobs</a></li>
             <li><a href="apply.html">Apply</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="enhancements.html">Enhancements</a></li>
@@ -27,7 +27,7 @@
         </nav>
       </div>
       <div class="navbar-right">
-        <div class="location">California, CA</div>
+        <div class="location">Hanoi, VN</div>
         <div class="user-avatar"></div>
         <label for="menu-toggle" class="menu-btn">&#9776; Menu</label>
       </div>
@@ -39,108 +39,244 @@
 
     <!-- ASIDE with extra details -->
     <aside class="sidebar">
-      <h3>Quick Info</h3>
-      <p><strong>Hotline:</strong> +1 234 567 890</p>
-      <p><strong>Website:</strong> <a href="https://www.luckyjob.com">luckyjob.com</a></p>
-      <p><strong>Branches:</strong> New York, Los Angeles, Chicago</p>
-      <p>
-        Follow our social channels for the latest job opportunities!
-      </p>
+      <h3>Filters</h3>
+
+      <!-- Working schedule -->
+      <div class="filter-group">
+        <h4>Working schedule</h4>
+        <label>
+          <input type="radio" name="working-schedule" /> Full time
+        </label>
+        <label>
+          <input type="radio" name="working-schedule" /> Part time
+        </label>
+        <label>
+          <input type="radio" name="working-schedule" /> Internship
+        </label>
+        <label>
+          <input type="radio" name="working-schedule" /> Project work
+        </label>
+        <label>
+          <input type="radio" name="working-schedule" /> Volunteering
+        </label>
+      </div>
+
+      <!-- Employment type -->
+      <div class="filter-group">
+        <h4>Employment type</h4>
+        <label>
+          <input type="checkbox" /> Full day
+        </label>
+        <label>
+          <input type="checkbox" /> Flexible schedule
+        </label>
+        <label>
+          <input type="checkbox" /> Shift work
+        </label>
+        <label>
+          <input type="checkbox" /> Distant work
+        </label>
+        <label>
+          <input type="checkbox" /> Shift method
+        </label>
+      </div>
     </aside>
 
     <!-- JOB DESCRIPTIONS -->
-    <section class="content-area">
+    <section class="content-job-area">
+      <div class="filter-bar">
+        <select name="position">
+          <option>Designer</option>
+          <option>Developer</option>
+          <option>Product Manager</option>
+        </select>
+
+        <select name="location">
+          <option>Work Location</option>
+          <option>Remote</option>
+          <option>On-site</option>
+        </select>
+
+        <select name="experience">
+          <option>Experience</option>
+          <option>Junior</option>
+          <option>Middle</option>
+          <option>Senior</option>
+        </select>
+
+        <select name="perMonth">
+          <option>Per month</option>
+          <option>Per hour</option>
+          <option>Per day</option>
+        </select>
+
+        <div class="salary-range">
+          <label for="salaryRange">Salary range</label>
+          <input type="range" id="salaryRange" min="1200" max="20000" value="5000" />
+        </div>
+      </div>
       <h1>Current Openings</h1>
 
       <article>
-        <h2>Position 1: Frontend Developer</h2>
-        <p><strong>Reference No.:</strong> FE123</p>
-        <p><strong>Title:</strong> Frontend Developer</p>
-        <p><strong>Salary Range:</strong> $1200 - $2000 per week</p>
-        <p><strong>Reports to:</strong> Head of Engineering</p>
-        <p>
-          <strong>Short Description:</strong> Responsible for creating engaging,
-          user-friendly web interfaces and ensuring cross-browser compatibility.
-        </p>
+        <div class="job-title">
+          <h2 id="job-name">Frontend Developer</h2>
+          <div class="short-description">
+            <p id="work-type">Remote</p>
+            <p id="experience">Expert</p>
+          </div>
+        </div>
+        <div class="job-description-content">
+          <div class="job-left-content">
+            <div class="description">
+              <h3>Short Description:</h3>
+              <p>
+                Responsible for creating engaging,
+                user-friendly web interfaces and ensuring cross-browser compatibility.
+              </p>
+            </div>
 
-        <h3>Key Responsibilities</h3>
-        <ul>
-          <li>Implement new frontend features and functionality</li>
-          <li>Optimize code for maximum performance</li>
-          <li>Collaborate with UX designers and backend developers</li>
-        </ul>
+            <div class="responsibilities">
+              <h3>Key Responsibilities:</h3>
+              <ul>
+                <li>Implement new frontend features and functionality</li>
+                <li>Optimize code for maximum performance</li>
+                <li>Collaborate with UX designers and backend developers</li>
+              </ul>
+            </div>
 
-        <h3>Requirements</h3>
-        <ol>
-          <li><strong>Essential:</strong>
-            <ul>
-              <li>Proficient in HTML5, CSS3, JS (2+ years)</li>
-              <li>Experience with React or Vue</li>
-            </ul>
-          </li>
-          <li><strong>Preferable:</strong>
-            <ul>
-              <li>Familiarity with Docker and CI/CD</li>
-              <li>Good communication in English</li>
-            </ul>
-          </li>
-        </ol>
-        <p>
-          Source/Reference:
-          <a href="https://recruitloop.com/blog/how-to-write-a-job-description" target="_blank">
-            RecruitLoop
-          </a>
-        </p>
+            <div class="requirement">
+              <h3>Requirements:</h3>
+              <ol>
+                <li>Essential:
+                  <ul>
+                    <li id="essential">Proficient in HTML5, CSS3, JS (2+ years)</li>
+                    <li id="essential">Experience with React or Vue</li>
+                  </ul>
+                </li>
+                <li>Preferable:
+                  <ul>
+                    <li id="essential">Familiarity with Docker and CI/CD</li>
+                    <li id="essential">Good communication in English</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+
+
+          </div>
+          <div class="job-right-content">
+            <div class="info">
+              <h3>Infomation:</h3>
+              <p></p><strong>Reference No.:</strong> FE123</p>
+              <p><strong>Title:</strong> Frontend Developer</p>
+              <p><strong>Salary Range:</strong> $1200 - $2000 per week</p>
+              <p><strong>Reports to:</strong> Head of Engineering</p>
+            </div>
+            <div class="other-info">
+              <h3>Other Information:</h3>
+              <p><strong>20+</strong> hiring people, <strong>5</strong> is active</p>
+            </div>
+            <a href="apply.html"> <button>Apply</button> </a>
+          </div>
+        </div>
       </article>
+      <!---->
 
       <article>
-        <h2>Position 2: UI/UX Designer</h2>
-        <p><strong>Reference No.:</strong> UX789</p>
-        <p><strong>Title:</strong> UI/UX Designer</p>
-        <p><strong>Salary Range:</strong> $1000 - $1800 per week</p>
-        <p><strong>Reports to:</strong> Product Manager</p>
-        <p>
-          <strong>Short Description:</strong> Plan and create visually appealing,
-          user-centered interfaces for both web and mobile platforms.
-        </p>
+        <div class="job-title">
+          <h2 id="job-name">UI/UX Designer</h2>
+          <div class="short-description">
+            <p id="work-type">On-site</p>
+            <p id="experience">Intern</p>
+          </div>
+        </div>
+        <div class="job-description-content">
+          <div class="job-left-content">
+            <div class="description">
+              <h3>Short Description:</h3>
+              <p>
+                Plan and create visually appealing,
+                user-centered interfaces for both web and mobile platforms.
+              </p>
+            </div>
 
-        <h3>Key Responsibilities</h3>
-        <ul>
-          <li>Develop wireframes and prototypes</li>
-          <li>Design UI based on core UX principles</li>
-          <li>Conduct user research and A/B testing</li>
-        </ul>
+            <div class="responsibilities">
+              <h3>Key Responsibilities:</h3>
+              <ul>
+                <li>Develop wireframes and prototypes.</li>
+                <li>Design UI based on core UX principles.</li>
+                <li>Conduct user research and A/B testing.</li>
+              </ul>
+            </div>
 
-        <h3>Requirements</h3>
-        <ol>
-          <li><strong>Essential:</strong>
-            <ul>
-              <li>Figma or Sketch proficiency</li>
-              <li>Solid grasp of UX best practices</li>
-            </ul>
-          </li>
-          <li><strong>Preferable:</strong>
-            <ul>
-              <li>Illustration skills</li>
-              <li>Familiar with Agile/Scrum</li>
-            </ul>
-          </li>
-        </ol>
-        <p>
-          Source/Reference:
-          <a href="https://recruitloop.com/blog/how-to-write-a-job-description" target="_blank">
-            RecruitLoop
-          </a>
-        </p>
+            <div class="requirement">
+              <h3>Requirements:</h3>
+              <ol>
+                <li>Essential:
+                  <ul>
+                    <li id="essential">Figma or Sketch proficiency</li>
+                    <li id="essential">Solid grasp of UX best practices</li>
+                  </ul>
+                </li>
+                <li>Preferable:
+                  <ul>
+                    <li id="essential">Illustration skills</li>
+                    <li id="essential">Familiar with Agile/Scrum</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+
+
+          </div>
+          <div class="job-right-content">
+            <div class="info">
+              <h3>Infomation:</h3>
+              <p></p><strong>Reference No.:</strong> UX789</p>
+              <p><strong>Title:</strong> UI/UX Designer</p>
+              <p><strong>Salary Range:</strong> $100 - $800 per week</p>
+              <p><strong>Reports to:</strong> Product Manager</p>
+            </div>
+            <div class="other-info">
+              <h3>Other Information:</h3>
+              <p><strong>30+</strong> hiring people, <strong>1</strong> is active</p>
+            </div>
+            <a href="apply.html"> <button>Apply</button> </a>
+
+          </div>
+        </div>
       </article>
-
-      <!-- FOOTER -->
-      <footer style="margin-top: 2rem;">
-        <hr />
-        <small>&copy; 2025 LuckyJob. All rights reserved.</small>
-      </footer>
     </section>
   </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="enhancements.html">Enhancements</a></li>
+            <!-- An email link as required -->
+            <li><a href="105313596@student.swin.edu.au">Email</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>Phone: 0962863399</p>
+          <p>Email: 105313596@student.swin.edu.au</p>
+          <p>Add: 221 Burwood Highway Burwood Victoria 3125 Australia</p>
+        </div>
+
+        <div class="footer-time">
+          <h3>Opening</h3>
+          <p>Mon - Friday: 9AM - 5PM</p>
+          <p>Saturday: 9AM - 2PM</p>
+          <p>Sunday: 9AM - 2PM</p>
+        </div>
+      </div>
+    </footer>
 </body>
 
 </html>
