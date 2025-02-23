@@ -629,8 +629,6 @@ select:valid {
 }
 
 .main-intro {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.658)),
-    url("/cos10026/styles/images/indexmeeting.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -642,9 +640,8 @@ select:valid {
 
 #intro-logo {
   margin: auto;
-  width: 280px;
-  height: 100px;
-  background: url("/cos10026/styles/images/company_logo.png");
+  width: 270px;
+  height: 150px;
   background-size: cover;
   background-repeat: no-repeat;
   animation: floatUpDown 3s ease-in-out infinite;
@@ -742,28 +739,24 @@ select:valid {
 }
 
 #partnered-picture {
-  background: url("/cos10026/styles/images/shakehand.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 #specialized-picture {
-  background: url("/cos10026/styles/images/specialized.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 #support-picture {
-  background: url("/cos10026/styles/images/support.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 #coaching-picture {
-  background: url("/cos10026/styles/images/coaching.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
