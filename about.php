@@ -126,16 +126,16 @@
 
     $members = [
         new Member("Anh Tuan Le", 28, "+5 year of experience in App Development and Web Development", 
-            "Java, VueJS, Swift, PostgreSQL", "Pickleball", "HN", "images/atuan.jpg"),
+            "Java, VueJS, Swift, PostgreSQL", "Pickleball", "HN", "images/anhtuan.jpg"),
 
         new Member("Nguyen Quoc Trung", 18, "Certificate in Mindx Web-Advanced Course", 
-            "Ruby, HTML, CSS", "Sleep", "HN", "images/trung.jpg"),
+            "Ruby, HTML, CSS", "Sleep", "HN", "images/Trung.png"),
 
         new Member("Nguyen Duc Minh", 19, "0 years of experience and I have just been learning to code for 3 months", 
             "HTML and CSS", "Playing sports", "HN", "images/dminh.jpg"),
 
         new Member("Nguyen Van Hai Ninh", 18, "+17 years of experience in bumming around", 
-            "Making band-aid fixes", "Playing video games", "Hai Duong", "images/ninh.jpg")
+            "Making band-aid fixes", "Playing video games", "Hai Duong", "images/haininh.jpg")
     ];
 ?>
 
