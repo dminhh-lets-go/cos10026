@@ -104,57 +104,65 @@
     <!-- Member Detail -->
 
     <?php
-    class Member {
-        public string $name;
-        public int $age;
-        public string $experience;
-        public string $skills;
-        public string $hobbies;
-        public string $hometown;
-        public string $image;
-
-        public function __construct($name, $age, $experience, $skills, $hobbies, $hometown, $image) {
-            $this->name = $name; 
-            $this->age = $age;
-            $this->experience = $experience;
-            $this->skills = $skills;
-            $this->hobbies = $hobbies;
-            $this->hometown = $hometown;
-            $this->image = $image; 
-        }
-    }
-
     $members = [
-        new Member("Anh Tuan Le", 28, "+5 year of experience in App Development and Web Development", 
-            "Java, VueJS, Swift, PostgreSQL", "Pickleball", "HN", "images/anhtuan.jpg"),
+      [
+          "name" => "Anh Tuan Le",
+          "age" => "18 + 10",
+          "experience" => "+5 year of experience in App Development and Web Development",
+          "skills" => "Java, Vuejs, Swift, PostgresSQL",
+          "hobbies" => "Pickleball",
+          "hometown" => "HN",
+          "image" => "./styles/images/anhtuan.jpg"
+      ],
+      [
+          "name" => "Nguyen Quoc Trung",
+          "age" => "18",
+          "experience" => "Certificate in Mindx Web-Advanced Course",
+          "skills" => "Ruby, HTML, CSS",
+          "hobbies" => "Sleep",
+          "hometown" => "HN",
+          "image" => "./styles/images/Trung.png"
+      ],
+      [
+          "name" => "Nguyen Duc Minh",
+          "age" => "19",
+          "experience" => "0 years of experience and I have just been learning to code for 3 months.",
+          "skills" => "HTML and CSS",
+          "hobbies" => "Playing sports",
+          "hometown" => "HN",
+          "image" => "./styles/images/dminh.jpg"
+      ],
+      [
+          "name" => "Nguyen Van Hai Ninh",
+          "age" => "18",
+          "experience" => "+17 years of experience in bumming around",
+          "skills" => "Making band-aid fixes",
+          "hobbies" => "Playing video games",
+          "hometown" => "Hai Duong",
+          "image" => "./styles/images/haininh.jpg"
+      ]
 
-        new Member("Nguyen Quoc Trung", 18, "Certificate in Mindx Web-Advanced Course", 
-            "Ruby, HTML, CSS", "Sleep", "HN", "images/Trung.png"),
-
-        new Member("Nguyen Duc Minh", 19, "0 years of experience and I have just been learning to code for 3 months", 
-            "HTML and CSS", "Playing sports", "HN", "images/dminh.jpg"),
-
-        new Member("Nguyen Van Hai Ninh", 18, "+17 years of experience in bumming around", 
-            "Making band-aid fixes", "Playing video games", "Hai Duong", "images/haininh.jpg")
     ];
-?>
+    ?>
 
 <h2>MORE ABOUT US .....</h2>
 
 <div id="member_details_container">
     <?php foreach ($members as $member): ?>
         <div class="info_member">
-            <img class="member-photo" src="<?= $member->image ?>" alt="<?= $member->name ?>">
+            <div class="info_member_picture">
+              <img class="member-photo" src="<?= $member["image"] ?>" alt="<?= $member["name"] ?>">
+            </div>
             <div class="info_member_desc">
-                <ul class="desc_details">
-                    <li><h3>👋 Name: <?= $member->name ?></h3></li>
-                    <li>🎂 Age: <?= $member->age ?></li>
-                    <li>💼 Work experience: <?= $member->experience ?></li>
-                    <li>🛠️ Key skills: <?= $member->skills ?></li>
-                    <li>😍 Hobbies: <?= $member->hobbies ?></li>
-                    <li>🏡 About my Hometown: <?= $member->hometown ?></li>
-                </ul>
-                <a href="mailto:105313596@student.swin.edu.au" class="contact-btn">Contact Me</a>
+              <ul class="desc_details">
+                  <li><h3>👋 Name: <?= $member["name"] ?></h3></li>
+                  <li>🎂 Age: <?= $member["age"] ?></li>
+                  <li>💼 Work experience: <?= $member["experience"] ?></li>
+                  <li>🛠️ Key skills: <?= $member["skills"] ?></li>
+                  <li>😍 Hobbies: <?= $member["hobbies"] ?></li>
+                  <li>🏡 About my Hometown: <?= $member["hometown"] ?></li>
+              </ul>
+              <a href="mailto:105313596@student.swin.edu.au" class="contact-btn">Contact Me</a>
             </div>
         </div>
     <?php endforeach; ?>
