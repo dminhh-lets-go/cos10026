@@ -37,7 +37,6 @@ $members = [
         "image" => "./styles/images/haininh.jpg"
     ]
 ];
-
 $timetable = [
     ["date" => "10/2/2025", "time" => "8:00 - 11:00", "task" => "Summarize the assignment requirements and grading criteria", "status" => true],
     ["date" => "15/2/2025", "time" => "13:00 - 16:00", "task" => "Assign tasks and finalize code submission approach", "status" => true],
