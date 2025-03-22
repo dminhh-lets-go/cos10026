@@ -103,66 +103,22 @@
 
     <!-- Member Detail -->
 
-    <?php
-    $members = [
-      [
-          "name" => "Anh Tuan Le",
-          "age" => "18 + 10",
-          "experience" => "+5 year of experience in App Development and Web Development",
-          "skills" => "Java, Vuejs, Swift, PostgresSQL",
-          "hobbies" => "Pickleball",
-          "hometown" => "HN",
-          "image" => "./styles/images/anhtuan.jpg"
-      ],
-      [
-          "name" => "Nguyen Quoc Trung",
-          "age" => "18",
-          "experience" => "Certificate in Mindx Web-Advanced Course",
-          "skills" => "Ruby, HTML, CSS",
-          "hobbies" => "Sleep",
-          "hometown" => "HN",
-          "image" => "./styles/images/Trung.png"
-      ],
-      [
-          "name" => "Nguyen Duc Minh",
-          "age" => "19",
-          "experience" => "0 years of experience and I have just been learning to code for 3 months.",
-          "skills" => "HTML and CSS",
-          "hobbies" => "Playing sports",
-          "hometown" => "HN",
-          "image" => "./styles/images/dminh.jpg"
-      ],
-      [
-          "name" => "Nguyen Van Hai Ninh",
-          "age" => "18",
-          "experience" => "+17 years of experience in bumming around",
-          "skills" => "Making band-aid fixes",
-          "hobbies" => "Playing video games",
-          "hometown" => "Hai Duong",
-          "image" => "./styles/images/haininh.jpg"
-      ]
-
-    ];
-    ?>
-
 <h2>MORE ABOUT US .....</h2>
-
+<?php include "about_setting.php" ?>
 <div id="member_details_container">
     <?php foreach ($members as $member): ?>
         <div class="info_member">
-            <div class="info_member_picture">
-              <img class="member-photo" src="<?= $member["image"] ?>" alt="<?= $member["name"] ?>">
-            </div>
+            <img class="member-photo" src="<?= $member["image"] ?>" alt="<?= $member["name"] ?>">
             <div class="info_member_desc">
-              <ul class="desc_details">
-                  <li><h3>👋 Name: <?= $member["name"] ?></h3></li>
-                  <li>🎂 Age: <?= $member["age"] ?></li>
-                  <li>💼 Work experience: <?= $member["experience"] ?></li>
-                  <li>🛠️ Key skills: <?= $member["skills"] ?></li>
-                  <li>😍 Hobbies: <?= $member["hobbies"] ?></li>
-                  <li>🏡 About my Hometown: <?= $member["hometown"] ?></li>
-              </ul>
-              <a href="mailto:105313596@student.swin.edu.au" class="contact-btn">Contact Me</a>
+                <ul class="desc_details">
+                    <li><h3>👋 Name: <?= $member["name"]?></h3></li>
+                    <li>🎂 Age: <?= $member["age"] ?></li>
+                    <li>💼 Work experience: <?= $member["experience"] ?></li>
+                    <li>🛠️ Key skills: <?= $member["skills"] ?></li>
+                    <li>😍 Hobbies: <?= $member["hobbies"] ?></li>
+                    <li>🏡 About my Hometown: <?= $member["hometown"] ?></li>
+                </ul>
+                <a href="mailto:105313596@student.swin.edu.au" class="contact-btn">Contact Me</a>
             </div>
         </div>
     <?php endforeach; ?>
@@ -170,64 +126,32 @@
 
 
     <!-- Timetable -->
-    <section style="background: #fff; border-radius: 8px; padding: 1rem; margin-top: 1rem;">
-      <h2 id="timetable_title">Group Timetable (Assumed)</h2>
-      <table id="timetable">
+    <?php include"about_setting.php"?>
+<section style="background: #fff; border-radius: 8px; padding: 1rem; margin-top: 1rem;">
+    <h2 id="timetable_title">Group Timetable (Assumed)</h2>
+    <table id="timetable">
         <thead>
-          <tr id="tr_head">
-            <th>Date</th>
-            <th>Time</th>
-            <th>Tasks</th>
-            <th class="table-status">Status</th>
-          </tr>
+            <tr id="tr_head">
+                <th>Date</th>
+                <th>Time</th>
+                <th>Tasks</th>
+                <th class="table-status">Status</th>
+            </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>10/2/2025</td>
-            <td>8:00 - 11:00</td>
-            <td>Summarize the assignment requirements and grading criteria</td>
-            <td class="table-status-success">&#10004;</td>
-          </tr>
-          <tr>
-            <td>15/2/2025</td>
-            <td>13:00 - 16:00</td>
-            <td>Assign tasks and finalize code submission approach</td>
-            <td class="table-status-success">&#10004;</td>
-          </tr>
-          <tr>
-            <td>16/2/2025</td>
-            <td>9:00 - 12:00</td>
-            <td>Work on individually assigned tasks</td>
-            <td class="table-status-success">&#10004;</td>
-          </tr>
-          <tr>
-            <td>17/2/2025</td>
-            <td>9:00 - 12:00</td>
-            <td>Meeting</td>
-            <td class="table-status-fail">&#10008;</td>
-          </tr>
-          <tr>
-            <td>18/02/2025</td>
-            <td>13:00 - 17:00</td>
-            <td>Team meeting to solve technical issues while coding</td>
-            <td class="table-status-success">&#10004;</td>
-          </tr>
-          <tr>
-            <td>20/02/2025</td>
-            <td>19:00 - 23:00</td>
-            <td>Resolve Responsive design problems</td>
-            <td class="table-status-success">&#10004;</td>
-          </tr>
-          <tr>
-            <td>22/02/2025</td>
-            <td>23:00 - 00:00</td>
-            <td>Final check before submission</td>
-            <td class="table-status-success">&#10004;</td>
-          </tr>
+            <?php foreach ($timetable as $event): ?>
+                <tr>
+                    <td><?= $event["date"] ?></td>
+                    <td><?= $event["time"] ?></td>
+                    <td><?= $event["task"] ?></td>
+                    <td class="<?= $event["status"] ? 'table-status-success' : 'table-status-fail' ?>">
+                        <?= $event["status"] ? "&#10004;" : "&#10008;" ?>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
         </tbody>
-      </table>
-
-    </section>
+    </table>
+</section>
   </div>
 
     <footer>
